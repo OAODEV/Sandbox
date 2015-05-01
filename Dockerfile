@@ -12,8 +12,9 @@ RUN apt-get update && apt-get install -y \
     python-psycopg2
 
 # Install psql client tools
+
 COPY psql-client-install.sh /tmp/
-RUN /tmp/pg-client-install.sh
+RUN /tmp/psql-client-install.sh
 
 
 RUN mkdir /var/run/sshd
