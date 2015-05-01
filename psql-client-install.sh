@@ -7,4 +7,4 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
   sudo apt-key add -
 
 # Update the package lists, and install psql client
-sudo apt-get update && apt-get install postgresql-client-9.4
+sudo apt-get update && apt-get install -y postgresql-client-9.4
