@@ -11,6 +11,13 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     python-psycopg2
 
+# Install psql client tools
+
+COPY psql-client-install.sh /tmp/
+RUN chmod u+x /tmp/psql-client-install.sh
+RUN /tmp/psql-client-install.sh
+
+
 RUN mkdir /var/run/sshd
 RUN echo 'root:sandbox' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
