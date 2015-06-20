@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 # Install psql client tools
 
 COPY psql-client-install.sh /tmp/
-RUN chmod u+x /tmp/psql-client-install.sh
+RUN chmod +x /tmp/psql-client-install.sh
 RUN /tmp/psql-client-install.sh
 
 
